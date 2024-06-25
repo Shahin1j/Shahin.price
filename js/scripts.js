@@ -12,7 +12,7 @@ function update_price(){
     $('#refresh').removeClass('fa-sync');
     $('#refresh').addClass('spinner-border');
 
-    $.get('https://api.boodje.com/api/service/latest-price', function (data, status) {
+    $.get('https://api.boodje.com/v1/service/latest-price', function (data, status) {
         let time = data.message;
         data = data.data;
         console.log(data);
